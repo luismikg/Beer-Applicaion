@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Bar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_brewed">First brewed</string>
+    <string name="selectBeer">Select a beer</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="foodPairing">"Food pairing: "</string>
+    <string name="addedFavorite">"Added to favorites!"</string>
+    <string name="removeFavorite">"Remove from favorites!"</string>
+    <string name="titleLogin">Beers\n\t\t\t\t\t\t\t\t\t\t\t\tApp</string>
+    <string name="titleApp">Beers App</string>
+    <string name="bearsCatalog">Beers Catalog</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="hint_email">example@email.com</string>
+    <string name="hint_password">Your password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="ph">pH:</string>
+    <string name="share_text">The beer %1$s (%2$s) is a delicious drink, with %3$f of alcohol.</string>
+    <string name="share">share</string>
+</resources>

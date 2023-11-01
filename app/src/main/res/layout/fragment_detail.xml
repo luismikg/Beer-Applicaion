@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".framework.presentation.detail.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <View
+            android:layout_width="@dimen/zeroDP"
+            android:layout_height="@dimen/zeroDP"
+            android:alpha="@dimen/alpha05"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/itemPicture"
+            android:layout_width="@dimen/zeroDP"
+            android:layout_height="@dimen/zeroDP"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/fiftyDP"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/beer_dummy" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDP"
+            android:src="@drawable/local_bar_24px"
+            app:layout_constraintBottom_toTopOf="@id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/avb"
+            style="@style/TitleFont"
+            android:layout_width="@dimen/zeroDP"
+            android:layout_height="wrap_content"
+            android:text="@{item.abv.toString()}"
+            android:layout_marginStart="@dimen/twentyDP"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            tools:text="43" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/light_mode_24px"
+            app:layout_constraintBottom_toTopOf="@id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/attenuationLevel"
+            style="@style/TitleFont"
+            android:layout_width="@dimen/zeroDP"
+            android:layout_height="wrap_content"
+            android:text="@{item.attenuation_level.toString()}"
+            android:layout_marginStart="@dimen/twentyDP"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            tools:text="43" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/SubTitleFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ph"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/addToFavorite"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/ph"
+            style="@style/TitleFont"
+            android:layout_width="@dimen/zeroDP"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twentyDP"
+            android:text="@{item.ph.toString()}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            tools:text="43" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToFavorite"
+            android:layout_width="@dimen/fiftyDP"
+            android:layout_height="@dimen/fiftyDP"
+            android:layout_marginEnd="@dimen/twentyDP"
+            android:layout_marginBottom="@dimen/twentyDP"
+
+            android:background="@drawable/like_beer"
+            android:contentDescription="@string/app_name"
+            android:onClick="@{()-> mainViewModel.pressAddFavorite()}"
+            android:padding="@dimen/fiftyDP"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/percent05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/percent05" />
+
+
+        <TextView
+            android:id="@+id/itemWeight"
+            style="@style/TitleFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDP"
+            android:layout_marginTop="@dimen/twentyDP"
+            android:text='@{item.tagline}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            tools:text="Title" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zeroDP"
+            android:paddingTop="@dimen/twentyDP"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemWeight">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/SubTitleFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/twentyDP"
+                    android:layout_marginTop="@dimen/twentyDP"
+                    android:text='@{item.description}'
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3"
+                    tools:text="Description" />
+
+                <include
+                    android:id="@+id/set1"
+                    layout="@layout/text_item" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="com.luis.beerapplication.framework.presentation.activity.viewModel.MainViewModel" />
+
+        <variable
+            name="item"
+            type="com.luis.beerapplication.data.model.BarItem" />
+    </data>
+</layout>

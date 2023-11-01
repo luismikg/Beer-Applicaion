@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="general_padding">8dp</dimen>
+    <dimen name="eightDP">8dp</dimen>
+    <dimen name="zeroDP">0dp</dimen>
+    <dimen name="fiftyDP">50dp</dimen>
+    <dimen name="twentyDP">25dp</dimen>
+    <dimen name="eightyDP">80dp</dimen>
+    <dimen name="twoHundredDP">200dp</dimen>
+    <dimen name="fifteenDP">15dp</dimen>
+    <dimen name="fiveDP">5dp</dimen>
+    <dimen name="tenDP">10dp</dimen>
+    <item name="alpha02" format="float" type="dimen">0.2</item>
+    <item name="alpha05" format="float" type="dimen">0.5</item>
+    <item name="alpha08" format="float" type="dimen">0.8</item>
+    <item name="percent02" format="float" type="dimen">0.2</item>
+    <item name="percent05" format="float" type="dimen">0.5</item>
+    <item name="percent03" format="float" type="dimen">0.3</item>
+    <item name="percent08" format="float" type="dimen">0.8</item>
+</resources>

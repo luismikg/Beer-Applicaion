@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all"
+        android:icon="@drawable/list_white_18dp"
+        android:title="Todos" />
+    <item
+        android:id="@+id/favorites"
+        android:icon="@drawable/like_beer"
+        android:title="Favoritos" />
+</menu>
